@@ -70,3 +70,4 @@ To ensure service continuity and enforce cybersecurity best practices:
 
 ```bash
 sudo /opt/splunk/bin/splunk enable boot-start -user splunk
+
