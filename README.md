@@ -39,7 +39,8 @@ Before deploying Splunk Enterprise on Linux, several kernel and system-level con
 > ### 🖥️ Hardware Provisioning Alert
 > during the post-installation health check, Splunk generated a warning regarding the server's hardware specifications. This is expected in a training/lab environment where resources are minimized.
 >
-> ![Hardware Alert](path_to_hardware_alert_image.png)
+<img width="292" height="33" alt="Screenshot 2026-08-06 122544" src="https://github.com/user-attachments/assets/f97bbed3-9de9-432a-8b0b-554bd568f79b" />
+
 
 ### 1. Disabling Transparent Huge Pages (THP)
 * **What was changed?**  
@@ -47,16 +48,25 @@ Before deploying Splunk Enterprise on Linux, several kernel and system-level con
 * **Why is this necessary?**  
   By default, Linux attempts to optimize memory by grouping standard memory pages ($4\text{ KB}$) into huge blocks ($2\text{ MB}$). However, Splunk performs aggressive, high-frequency, continuous read/write operations for indexing and searching. THP introduces memory allocation latency and CPU throttling, which can degrade Splunk's performance by up to $50\%$ or lead to system hangs. Disabling THP ensures fast, allocation-on-demand memory access.
 
+
+<img width="292" height="33" alt="Screenshot 2026-08-06 122544" src="https://github.com/user-attachments/assets/f27d33e4-304d-4279-98eb-d4e0fdfa6cc0" />
+
 ### 2. Increasing Resource Limits (`ulimits`)
 * **What was changed?**  
   Increased system resource constraints for file descriptors (`nofile`) and user processes (`nproc`) to higher values (or `unlimited`).
+
+
+
+  <img width="200" height="65" alt="Screenshot 2026-08-06 124920" src="https://github.com/user-attachments/assets/3880d376-06a8-4126-8a21-9f21d71b526a" />
+<img width="243" height="155" alt="Screenshot 2026-08-06 124445" src="https://github.com/user-attachments/assets/cb3e103c-0a87-44ad-9bd8-0946f4fd9d70" />
+
 * **Why is this necessary?**  
   Splunk simultaneously manages thousands of open network connections, socket bindings, index files, and search processes. Standard Linux defaults (e.g., $1024$ open files) are insufficient and will cause `Too many open files` errors and indexing failures.
 
 ### 🔍 Memory Provisioning Verification
 The following screenshot confirms that despite the hardware warning, Splunk has detected the available memory on the Ubuntu host.
 
-![Memory Provisioning](path_to_memory_image.png)
+<img width="659" height="311" alt="Screenshot 2026-08-06 144128" src="https://github.com/user-attachments/assets/e53e4fce-0df8-4364-9b2d-5436f15c2238" />
 
 ---
 
