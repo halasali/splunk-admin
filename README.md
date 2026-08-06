@@ -63,12 +63,6 @@ Before deploying Splunk Enterprise on Linux, several kernel and system-level con
 * **Why is this necessary?**  
   Splunk simultaneously manages thousands of open network connections, socket bindings, index files, and search processes. Standard Linux defaults (e.g., $1024$ open files) are insufficient and will cause `Too many open files` errors and indexing failures.
 
-### 🔍 Memory Provisioning Verification
-The following screenshot confirms that despite the hardware warning, Splunk has detected the available memory on the Ubuntu host.
-
-<img width="659" height="311" alt="Screenshot 2026-08-06 144128" src="https://github.com/user-attachments/assets/e53e4fce-0df8-4364-9b2d-5436f15c2238" />
-
----
 
 ## 🔒 Service Configuration & Boot-Start Setup
 
