@@ -35,7 +35,12 @@ Splunk Enterprise consists of core operational components and specialized admini
 ## ⚡ System Hardening & Performance Optimization
 
 Before deploying Splunk Enterprise on Linux, several kernel and system-level configurations must be applied to meet production standards and prevent bottlenecks.
-!Screenshot 2026-08-06 122544.png
+
+> ### 🖥️ Hardware Provisioning Alert
+> during the post-installation health check, Splunk generated a warning regarding the server's hardware specifications. This is expected in a training/lab environment where resources are minimized.
+>
+> ![Hardware Alert](path_to_hardware_alert_image.png)
+
 ### 1. Disabling Transparent Huge Pages (THP)
 * **What was changed?**  
   Disabled **Transparent Huge Pages (THP)** at the kernel level (`[never]`).
@@ -47,8 +52,13 @@ Before deploying Splunk Enterprise on Linux, several kernel and system-level con
   Increased system resource constraints for file descriptors (`nofile`) and user processes (`nproc`) to higher values (or `unlimited`).
 * **Why is this necessary?**  
   Splunk simultaneously manages thousands of open network connections, socket bindings, index files, and search processes. Standard Linux defaults (e.g., $1024$ open files) are insufficient and will cause `Too many open files` errors and indexing failures.
-!image.png
----!image.png
+
+### 🔍 Memory Provisioning Verification
+The following screenshot confirms that despite the hardware warning, Splunk has detected the available memory on the Ubuntu host.
+
+![Memory Provisioning](path_to_memory_image.png)
+
+---
 
 ## 🔒 Service Configuration & Boot-Start Setup
 
