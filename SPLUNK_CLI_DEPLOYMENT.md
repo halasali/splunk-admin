@@ -1,4 +1,4 @@
-🚀 Manual Deployment of Splunk Apps & Add-ons via CLI (Linux Server)
+## 🚀 Manual Deployment of Splunk Apps & Add-ons via CLI (Linux Server)
 📌 Overview
 This repository documents the production-grade installation and deployment workflow for Splunk Enterprise Apps and Add-ons (TAs) on a headless Ubuntu Linux Server.
 
