@@ -69,7 +69,9 @@ Before deploying Splunk Enterprise on Linux, several kernel and system-level con
 To ensure service continuity and enforce cybersecurity best practices:
 
 ```bash
-sudo /opt/splunk/bin/splunk enable boot-start -user splunk
+sudo /opt/splunk/bin/splunk enable boot-start -user splunk>
+```
 ## 📌 **App Deployment Guide:** Check out the [Manual Splunk App Deployment via CLI](SPLUNK_CLI_DEPLOYMENT.md) for step-by-step instructions and file transfer verification.
+
 
 
