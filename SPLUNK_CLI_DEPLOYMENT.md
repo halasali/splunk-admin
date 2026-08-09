@@ -28,6 +28,7 @@ Downloaded the required Splunk Apps (.tgz / .spl) from Splunkbase onto the Windo
 
 📸 Transfer Verification (WinSCP Screenshot)
 Below is the file transfer verification showing the uploaded Splunk App packages in /home/ubuntu/:
+
 <img width="401" height="331" alt="image2" src="https://github.com/user-attachments/assets/5d1fbfd5-eb77-4487-be2a-29862ba5aa7f" />
 
 3. CLI Extraction & Installation
