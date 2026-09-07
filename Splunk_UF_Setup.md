@@ -1,4 +1,3 @@
-<img width="757" height="431" alt="img" src="https://github.com/user-attachments/assets/82b54bb0-7c02-4105-8b14-0caaac91ae10" />
 # Splunk Universal Forwarder Deployment & Log Ingestion on Ubuntu
 
 A comprehensive guide and lab documentation for installing, configuring, and deploying a **Splunk Universal Forwarder (UF)** on an Ubuntu Linux environment, connecting it to a **Splunk Enterprise Indexer**, and configuring automated log ingestion for system logs (`/var/log/syslog`).
@@ -64,8 +63,8 @@ Splunk SPL
 index="custome_index"
 Results:
 Events Ingested: Over 1,000+ system events indexed successfully.
-
-<img width="757" height="431" alt="img" src="https://github.com/user-attachments/assets/7bf6cccb-914f-4f64-94c9-9369b2a48d54" />
+```
+<img width="757" height="431" alt="img" src="https://github.com/user-attachments/assets/82b54bb0-7c02-4105-8b14-0caaac91ae10" />
 
 
 Metadata Verified:
