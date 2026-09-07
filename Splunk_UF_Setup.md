@@ -63,7 +63,7 @@ Splunk SPL
 index="custome_index"
 Results:
 Events Ingested: Over 1,000+ system events indexed successfully.
-
+![Splunk Verification Results](img.png)
 Metadata Verified:
 
 host: ubuntu
